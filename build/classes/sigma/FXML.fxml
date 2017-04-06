@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="3.0" prefHeight="510.0" prefWidth="200.0">
+         <children>
+            <Button layoutX="23.0" layoutY="451.0" mnemonicParsing="false" text="Employee list" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="198.0" layoutY="6.0" prefHeight="510.0" prefWidth="403.0">
+         <children>
+            <AnchorPane layoutX="-14.0" prefHeight="177.0" prefWidth="415.0">
+               <children>
+                  <TableView fx:id="projectTableView" layoutX="5.0" layoutY="42.0" prefHeight="136.0" prefWidth="307.0">
+                     <columns>
+                        <TableColumn fx:id="projectID" prefWidth="37.0" text="ID" />
+                        <TableColumn fx:id="projectName" prefWidth="125.0" text="Name" />
+                        <TableColumn fx:id="projectdescription" prefWidth="141.0" text="Description" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="26.0" layoutY="14.0" prefHeight="21.0" prefWidth="116.0" text="Projects">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2182ff" height="37.0" layoutY="-1.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+                  <VBox layoutX="312.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" text="Add">
+                           <VBox.margin>
+                              <Insets left="20.0" top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="67.0" text="Edit">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Delete">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-13.0" layoutY="195.0" prefHeight="143.0" prefWidth="403.0">
+               <children>
+                  <TableView fx:id="departmentTableView" layoutX="6.0" layoutY="46.0" prefHeight="112.0" prefWidth="307.0">
+                     <columns>
+                        <TableColumn fx:id="departmentID" prefWidth="42.0" text="ID" />
+                        <TableColumn fx:id="departmentAddress" prefWidth="108.0" text="Address" />
+                        <TableColumn fx:id="departmentName" prefWidth="92.0" text="Name" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="130.0" text="Departments">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2182ff" height="43.0" layoutX="4.0" layoutY="9.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="136.0" />
+                  <VBox layoutX="313.0" prefHeight="209.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="66.0" text="Add">
+                           <VBox.margin>
+                              <Insets left="20.0" top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="67.0" text="Edit">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Delete">
+                           <VBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-1.0" layoutY="349.0" prefHeight="158.0" prefWidth="403.0">
+               <children>
+                  <ListView fx:id="employeeConsultantListview" layoutX="2.0" layoutY="35.0" prefHeight="123.0" prefWidth="291.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

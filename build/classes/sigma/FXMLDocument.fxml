@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sigma.FXMLDocumentController">
+    <children>
+      <AnchorPane layoutX="4.0" layoutY="6.0" prefHeight="553.0" prefWidth="625.0">
+         <children>
+            <AnchorPane prefHeight="221.0" prefWidth="290.0">
+               <children>
+                  <TableView fx:id="projectTableView" layoutY="29.0" onMouseClicked="#getOnMouseClickedOnProjectsView" prefHeight="131.0" prefWidth="274.0">
+                     <columns>
+                        <TableColumn fx:id="projectID" prefWidth="37.0" text="ID" />
+                        <TableColumn fx:id="projectName" prefWidth="125.0" text="Name" />
+                        <TableColumn fx:id="projectdescription" prefWidth="141.0" text="Description" />
+                     </columns>
+                  </TableView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2182ff" height="37.0" layoutX="-6.0" layoutY="-9.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+                  <Button layoutY="176.0" mnemonicParsing="false" onAction="#addProjectButtonAction" prefHeight="31.0" prefWidth="66.0" text="Add" />
+                  <Button layoutX="97.0" layoutY="176.0" mnemonicParsing="false" onAction="#editProjectButtonAction" prefHeight="31.0" prefWidth="67.0" text="Edit" />
+                  <Button layoutX="192.0" layoutY="176.0" mnemonicParsing="false" onAction="#deleteProjectButtonAction" text="Delete" />
+                  <Label layoutX="9.0" layoutY="1.0" prefHeight="27.0" prefWidth="130.0" text="Projects">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="errorMessageLabel" layoutX="24.0" layoutY="211.0" prefHeight="21.0" prefWidth="259.0" textFill="#dd3412" />
+                  <Button layoutX="158.0" layoutY="-1.0" mnemonicParsing="false" onAction="#HighestEarnerFromProjectButtonAction" text="Highest earner" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="408.0" prefHeight="205.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="5.0" layoutY="22.0" prefHeight="27.0" prefWidth="130.0" text="Consultants">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="consultantTableView" layoutY="49.0" prefHeight="156.0" prefWidth="489.0">
+                     <columns>
+                        <TableColumn fx:id="consultantID" prefWidth="31.0" text="ID" />
+                        <TableColumn fx:id="consultantFirstName" prefWidth="86.0" text="First name" />
+                        <TableColumn fx:id="consultantLastName" prefWidth="79.0" text="Last name" />
+                        <TableColumn fx:id="chargePerhr" prefWidth="60.0" text="Charge" />
+                        <TableColumn fx:id="consultantssn" prefWidth="44.0" text="ssn" />
+                        <TableColumn fx:id="consultantPhone" prefWidth="86.0" text="Phone" />
+                        <TableColumn fx:id="consultantEmail" prefWidth="110.0" text="email" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="520.0" layoutY="87.0" mnemonicParsing="false" onAction="#addConsultantButtonAction" prefHeight="31.0" prefWidth="66.0" text="Add" />
+                  <Button layoutX="520.0" layoutY="127.0" mnemonicParsing="false" onAction="#editConsultantButtonAction" prefHeight="31.0" prefWidth="67.0" text="Edit" />
+                  <Button layoutX="522.0" layoutY="168.0" mnemonicParsing="false" onAction="#deleteConsultantButtonAction" text="Delete" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2182ff" height="37.0" layoutX="2.0" layoutY="14.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="136.0" />
+                  <TextField fx:id="searchConsultant" layoutX="253.0" layoutY="7.0" promptText="Search consultant">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TextField>
+                  <Button layoutX="455.0" layoutY="7.0" mnemonicParsing="false" onAction="#SearchConsultantButtonAction" prefHeight="31.0" prefWidth="53.0" text="Ok" />
+                  <Button layoutX="509.0" layoutY="49.0" mnemonicParsing="false" onAction="#showAllConsultantButtonAction" text="Show all" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="296.0" prefHeight="221.0" prefWidth="304.0" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="25.0">
+               <children>
+                  <TableView fx:id="departmentTableView" layoutY="29.0" onMouseClicked="#getOnMouseClickedOnDepartmentConsultantView" prefHeight="131.0" prefWidth="290.0">
+                     <columns>
+                        <TableColumn fx:id="departmentID" prefWidth="39.0" text="ID" />
+                        <TableColumn fx:id="departmentAddress" prefWidth="97.0" text="Address" />
+                        <TableColumn fx:id="departmentName" prefWidth="62.0" text="Name" />
+                        <TableColumn fx:id="departmentDescription" prefWidth="119.0" text="Description" />
+                     </columns>
+                  </TableView>
+                  <Label prefHeight="27.0" prefWidth="130.0" text="Departments">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2182ff" height="31.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="136.0" />
+                  <Button layoutX="209.0" layoutY="176.0" mnemonicParsing="false" onAction="#deleteDepartmentButtonAction" text="Delete" />
+                  <Button layoutX="103.0" layoutY="176.0" mnemonicParsing="false" onAction="#editDepartmentButtonAction" prefHeight="31.0" prefWidth="67.0" text="Edit" />
+                  <Button layoutX="2.0" layoutY="176.0" mnemonicParsing="false" onAction="#addDepartmentButtonAction" prefHeight="31.0" prefWidth="66.0" text="Add" />
+                  <Button layoutX="172.0" mnemonicParsing="false" onAction="#HighestEarnerFromDepartmentButtonAction" text="Highest earner" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="4.0" layoutY="226.0" prefHeight="176.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="130.0" text="Employees">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="516.0" layoutY="164.0" mnemonicParsing="false" onAction="#deleteEmployeeButtonAction" prefHeight="21.0" prefWidth="63.0" text="Delete" />
+                  <Button layoutX="514.0" layoutY="123.0" mnemonicParsing="false" onAction="#editEmployeeButtonAction" prefHeight="31.0" prefWidth="67.0" text="Edit" />
+                  <Button layoutX="514.0" layoutY="75.0" mnemonicParsing="false" onAction="#addEmployeeButtonAction" prefHeight="31.0" prefWidth="66.0" text="Add" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2182ff" height="37.0" layoutY="9.0" opacity="0.12" stroke="BLACK" strokeType="INSIDE" width="130.0" />
+                  <TextField fx:id="searchEmployee" layoutX="245.0" layoutY="9.0" promptText="Search employee">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </TextField>
+                  <Button layoutX="446.0" layoutY="9.0" mnemonicParsing="false" onAction="#SearchEmployeeButtonAction" prefHeight="31.0" prefWidth="53.0" text="Ok" />
+                  <TableView fx:id="employeeTableView" layoutX="2.0" layoutY="48.0" prefHeight="131.0" prefWidth="480.0">
+                    <columns>
+                      <TableColumn fx:id="employeeID" prefWidth="31.0" text="ID" />
+                      <TableColumn fx:id="employeeFirstName" prefWidth="82.0" text="First name" />
+                        <TableColumn fx:id="employeeLastName" prefWidth="87.0" text="Last name" />
+                        <TableColumn fx:id="employeeSalary" prefWidth="71.0" text="Salary" />
+                        <TableColumn fx:id="employeessn" prefWidth="73.0" text="ssn" />
+                        <TableColumn fx:id="employeePhone" prefWidth="74.0" text="Phone" />
+                        <TableColumn fx:id="employeeEmail" prefWidth="107.0" text="email" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="504.0" layoutY="33.0" mnemonicParsing="false" onAction="#showAllEmployeesButtonAction" text="Show all" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+    
+</AnchorPane>
