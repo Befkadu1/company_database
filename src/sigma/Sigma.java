@@ -16,8 +16,7 @@ import javafx.stage.Stage;
  * @author Befkadu Degefa
  */
 public class Sigma extends Application
-{
-    
+{    
     @Override
     public void start(Stage stage) throws Exception
     {
